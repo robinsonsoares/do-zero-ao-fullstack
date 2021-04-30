@@ -4,7 +4,9 @@
   "description": "My Personal Portfolio",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon server.js",
+    "backend": "nodemon server.js",
+    "frontend": "cd frontend && yarn start",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\" ",
     "start": "node server.js"
   },
   "keywords": [
@@ -25,6 +27,7 @@
     "slug": "^4.0.3"
   },
   "devDependencies": {
+    "concurrently": "^6.0.2",
     "nodemon": "^2.0.7"
   },
   "engines": {
