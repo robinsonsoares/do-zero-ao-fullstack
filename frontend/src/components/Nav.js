@@ -3,6 +3,9 @@ import React from 'react'
 //Styled Components
 import styled from 'styled-components'
 
+//Navigation
+import { Link } from 'react-router-dom'
+
 const Nav = () => {
     const menuOptions = {
         about: '<About Me />',
@@ -11,11 +14,11 @@ const Nav = () => {
     }
     return (
         <StyledNav>
-            <h1>Robinson Soares</h1>
+            <h1><Link to='/'>Robinson Soares</Link></h1>
             <ul>
-                <li>About Me</li>
-                <li>Portfolio</li>
-                <li>Contact Me</li>
+                <li><Link to= '/' >{menuOptions.about}</Link></li>
+                <li><Link to='/portfolio' >{menuOptions.portfolio}</Link></li>
+                <li><Link to= '/contactme' >{menuOptions.contact}</Link></li>
             </ul>
         </StyledNav>
     )
@@ -31,12 +34,16 @@ const StyledNav = styled.nav`
     background: #282828;
     position: sticky;
     top: 0;
-    ul {
+    ul{
         display: flex;
         list-style: none;        
     }
-    li {
+    li{
         padding-left: 10rem;
+    }
+    a{
+        color: white;
+        text-decoration: none;
     }
 `;
 

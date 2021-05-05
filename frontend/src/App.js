@@ -4,7 +4,7 @@ import React from 'react'
 import GlobalStyle from './components/GlobalStyle'
 
 //Roteamento
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 
 // Components
 import AboutUs from './pages/AboutUs'
@@ -17,19 +17,17 @@ function App() {
     <div>
       <GlobalStyle />
       <Nav />
-      <BrowserRouter>
-        <Switch>
-          <Route exact path="/">
-            <AboutUs />
-          </Route>
-          <Route path="/portfolio">
-            <Portfolio />
-          </Route>
-          <Route path="/contactme">
-            <ContactMe />
-          </Route>          
-        </Switch>
-        </BrowserRouter>
+      <Switch>
+        <Route exact path="/">
+          <AboutUs />
+        </Route>
+        <Route path="/portfolio">
+          <Portfolio />
+        </Route>
+        <Route path="/contactme">
+          <ContactMe />
+        </Route>          
+      </Switch>
     </div>
   );
 }
