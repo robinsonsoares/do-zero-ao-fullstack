@@ -6,13 +6,34 @@ const ContactMe = () => {
             <div>Get in touch</div>
             <div id="areas">
                 <div id="form">
-                    Formulário
+                    <form id="contact-form" method="post">
+                        Name: <input type="text" />
+                        Email: <input type="email" />
+                        Message: <textarea rows="5" />
+                        <button type="submit">Submit</button>
+                    </form>
                 </div>
                 <div id="network">
                     <div className="social">
                         icon
                         <h3>github.com/robinsonsoares</h3>
                     </div>
+                    <div className="social">
+                        icon
+                        <h3>LinkedIn</h3>
+                    </div>
+                    <div className="social">
+                        icon
+                        <h3>Youtube</h3>
+                    </div>     
+                    <div className="social">
+                        icon
+                        <h3>Udemy</h3>
+                    </div>
+                    <div className="social">
+                        icon
+                        <h3>Telegram</h3>
+                    </div>                                                                           
                 </div>
             </div>
         </div>
