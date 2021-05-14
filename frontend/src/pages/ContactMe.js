@@ -2,6 +2,9 @@ import React from 'react'
 
 import styled from 'styled-components'
 
+import { faGithubSquare, faLinkedin, faYoutubeSquare, faInstagramSquare } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 const ContactMe = () => {
     return (
         <ContactStyled>
@@ -19,24 +22,20 @@ const ContactMe = () => {
                 </div>
                 <Network>
                     <Social href="http://github.com/robinsonsoares" target='_blank'>
-                        icon
+                        <FontAwesomeIcon icon={faGithubSquare} size='4x'/>
                         <h3>github.com/robinsonsoares</h3>
                     </Social>
-                    <Social>
-                        icon
+                    <Social href="https://www.linkedin.com/in/robinson-soares/" target='_blank'>
+                        <FontAwesomeIcon icon={faLinkedin} size='4x'/>
                         <h3>LinkedIn</h3>
                     </Social>
-                    <Social>
-                        icon
+                    <Social href="https://www.youtube.com/channel/UCqUY0IBwIZK_ICBKDQpk9XA" target='_blank'>                    
+                    <FontAwesomeIcon icon={faYoutubeSquare} size='4x' />
                         <h3>Youtube</h3>
                     </Social>     
-                    <Social>
-                        icon
-                        <h3>Udemy</h3>
-                    </Social>
-                    <Social>
-                        icon
-                        <h3>Telegram</h3>
+                    <Social href="https://www.instagram.com/soares.robinson/" target='_blank'>
+                    <FontAwesomeIcon icon={faInstagramSquare} size='4x'/>
+                        <h3>Instagram</h3>
                     </Social>                                                                           
                 </Network>
             </Areas>
@@ -78,6 +77,11 @@ const Social = styled.a`
         background: yellow;
         cursor: pointer;
     }
+    h3{
+        color: grey;
+        margin: 2rem;
+    }
+    color: inherit;
 `;
 
 export default ContactMe
