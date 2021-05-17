@@ -3,6 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import SocialNetworkSection from '../components/SocialNetworkSection'
+import ContactForm from '../components/ContactForm'
 
 const ContactMe = () => {
     return (
@@ -11,14 +12,7 @@ const ContactMe = () => {
                 <h2>Get in touch</h2>
             </Title>
             <Areas>
-                <div id="form">
-                    <form id="contact-form" method="post">
-                        Name: <input type="text" />
-                        Email: <input type="email" />
-                        Message: <textarea rows="5" />
-                        <button type="submit">Submit</button>
-                    </form>
-                </div>
+                <ContactForm />
                 <SocialNetworkSection />
             </Areas>
         </ContactStyled>
